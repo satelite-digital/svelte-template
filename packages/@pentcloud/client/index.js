@@ -3,7 +3,7 @@ import { confirmPassword, forgotPassword, signIn } from './auth.service'
 import { create, destroy, update, findOne, findMany } from './user.service'
 
 export default {
-    config : API.config,
+    instance : API.instance,
     auth : {
         confirmPassword,
         forgotPassword,

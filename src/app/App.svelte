@@ -1,13 +1,13 @@
 <script>
-	// Get context from app initialization and set default context values
+	// Get context from app initialization or set default context values
 	export let env = {
-			apiURL : 'http://localhost:3000'
+		apiURL : 'http://localhost:3000'
 	}
 
 	// get application index
 	import app from './index'
 
-	// Set context to use in all child components
+	// Set context to use in all application
 	import { setContext } from 'svelte'
 
 	// set env
@@ -16,10 +16,12 @@
 	// set services
 	setContext('services', app.services)
 
+	// set helpers
+	setContext('helpers', app.helpers)
+
 	// config requests
 	const { client } = app.services
-
-	client.config.defaults.headers["X-Another-Custom-Header"] = "victim"
+	client.instance.defaults.baseURL = env.apiURL
 
 	// Load router and routes
 	import Router from 'svelte-spa-router'

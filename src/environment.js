@@ -1,5 +1,5 @@
 const environment = {
-	apiURL : "http://localhost:3000"
+	apiURL : "https://sos-mobile-api-one.vercel.app"
 }
 
 export default environment;

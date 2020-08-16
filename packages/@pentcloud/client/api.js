@@ -19,7 +19,7 @@ const put = async(url, request) => apiRequest("put", url, request)
 const deleteRequest = async(url, request) => apiRequest("delete", url, request)
 
 const API = {
-    config : client,
+    instance : client,
     get,
     post,
     put,

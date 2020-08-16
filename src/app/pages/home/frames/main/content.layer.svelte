@@ -6,10 +6,11 @@
 	console.log(client)
 
 	onMount(async()=>{
-		await client.auth.signIn({
-			username : "erickaleruano@gmail.com",
-			password : "User#1234"
-		})
+		console.log(await client.custom.fuckTheWorld())
+			await client.auth.signIn({
+				username : "erickaleruano@gmail.com",
+				password : "User#1234"
+			})
 	})
 </script>
 
